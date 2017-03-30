@@ -1,0 +1,19 @@
+<div class="container" ng-controller="productController">
+  <div class="container">
+    <h2>Product1</h2>
+    <h4>highest bidder : {{products1[0].highest_bidder}}</h4>
+    <h4>highest bid price : ${{products1[0].highest_bid}}</h4>
+  </div>
+  <div class="container">
+    <h2>Product2</h2>
+    <h4>highest bidder : {{products2[0].highest_bidder}}</h4>
+    <h4>highest bid price : ${{products2[0].highest_bid}}</h4>
+  </div>
+  <div class="container">
+    <h2>Product3</h2>
+    <h4>highest bidder : {{products3[0].highest_bidder}}</h4>
+    <h4>highest bid price : ${{products3[0].highest_bid}}</h4>
+  </div>
+  <hr>
+  <button class="btn btn-warning btn-s" type="submit" name="button" ng-click="startBid()">Start Bid</button>
+</div>

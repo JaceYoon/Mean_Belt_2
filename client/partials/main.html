@@ -1,0 +1,55 @@
+<div class="container">
+    <h4 style="margin-left:900px" >Welcome <span style="color:green">{{curUser.name}}</span> |   <a href="/logout" style="font-size:20px; color:lightblue;">Logout</a></h4>
+  <hr>
+
+</div>
+
+<div class="container" ng-controller="productController">
+
+  <div class="container">
+
+    <p style="color:red" ng-repeat='error in errors1'>{{error}}</p>
+
+    Product 1
+    <input type="text" ng-model="Product1Filter" placeholder="Product 1 Filter ..">
+    <div class="container" style="border:1px solid black;  max-width=20px">
+      <p ng-repeat="product in products1 | filter:Product1Filter | orderBy : '-bid'">{{product.bid_user}} : $ {{product.bid}}</p>
+    </div>
+    <form ng-submit="create1()">
+      <input type="text" ng-model="product1.bid" placeholder="Put your amount here">
+      <button type="submit" name="button" ng-click="">Bid</button>
+    </form>
+  </div>
+  <hr>
+  <div class="container">
+
+    <p style="color:red" ng-repeat='error in errors2'>{{error}}</p>
+
+    Product 2
+    <input type="text" ng-model="Product2Filter" placeholder="Product 2 Filter ..">
+    <div class="container" style="border:1px solid black;  max-width=20px">
+      <p ng-repeat="product in products2 | filter:Product2Filter | orderBy : '-bid'">{{product.bid_user}} : $ {{product.bid}}</p>
+    </div>
+    <form ng-submit="create2()">
+      <input type="text" ng-model="product2.bid" placeholder="Put your amount here">
+      <button type="submit" name="button" ng-click="">Bid</button>
+    </form>
+  </div>
+  <hr>
+  <div class="container">
+
+    <p style="color:red" ng-repeat='error in errors3'>{{error}}</p>
+
+    Product 3
+    <input type="text" ng-model="Product3Filter" placeholder="Product 3 Filter ..">
+    <div class="container" style="border:1px solid black; max-width=20px">
+      <p ng-repeat="product in products3 | filter:Product3Filter | orderBy : '-bid'">{{product.bid_user}} : $ {{product.bid}}</p>
+    </div>
+    <form ng-submit="create3()">
+      <input type="text" ng-model="product3.bid" placeholder="Put your amount here">
+      <button type="submit" name="button" ng-click="">Bid</button>
+    </form>
+  </div>
+  <hr>
+  <button ng-click="end_bid()"type="submit" name="button" class="btn btn-success btn-s">End bids</button>
+</div>
